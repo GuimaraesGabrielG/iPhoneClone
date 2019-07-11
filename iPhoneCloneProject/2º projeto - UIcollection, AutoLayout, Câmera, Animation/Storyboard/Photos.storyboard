@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ahI-Ks-eN1">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Fotos-->
+        <scene sceneID="AgZ-oq-fAy">
+            <objects>
+                <viewController storyboardIdentifier="PhotosViewController" id="1H9-cj-Kzw" customClass="PhotosViewController" customModule="_º_projeto___UIcollection__AutoLayout__Ca_mera__Animation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cea-Tr-qGD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1QD-mE-BoY">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="tiJ-Kt-Ew3">
+                                    <size key="itemSize" width="102" height="102"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="SSs-UL-JrH" customClass="PhotoCollectionViewCell" customModule="_º_projeto___UIcollection__AutoLayout__Ca_mera__Animation" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="102" height="102"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="102" height="102"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="digg" translatesAutoresizingMaskIntoConstraints="NO" id="LQi-fT-KTE">
+                                                    <rect key="frame" x="0.0" y="0.0" width="102" height="100"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selecionar" translatesAutoresizingMaskIntoConstraints="NO" id="xg2-9u-HI5">
+                                                    <rect key="frame" x="60" y="67" width="38" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <connections>
+                                            <outlet property="gallery" destination="LQi-fT-KTE" id="sd3-vJ-gKW"/>
+                                            <outlet property="selecionar" destination="xg2-9u-HI5" id="fKy-bS-Md1"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="1H9-cj-Kzw" id="DSE-Ab-FD8"/>
+                                    <outlet property="delegate" destination="1H9-cj-Kzw" id="LVS-NE-qm5"/>
+                                </connections>
+                            </collectionView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AWX-af-3sG">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem systemItem="action" id="GBm-3b-Qlf"/>
+                                    <barButtonItem title="Adicionar a" width="338" id="KSs-3d-IeG"/>
+                                    <barButtonItem systemItem="trash" id="qe1-ec-YzD">
+                                        <connections>
+                                            <action selector="deletePhotos:" destination="1H9-cj-Kzw" id="Zez-4B-UaD"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="CuA-ul-ip6"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Fotos" id="1Xq-Bw-xbc">
+                        <barButtonItem key="leftBarButtonItem" title="voltar" id="kj8-58-McX">
+                            <connections>
+                                <action selector="voltar:" destination="1H9-cj-Kzw" id="iSu-V3-oVO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="adicionar" destination="KSs-3d-IeG" id="nLU-QS-eDC"/>
+                        <outlet property="collectionView" destination="1QD-mE-BoY" id="MQR-zb-ksr"/>
+                        <outlet property="compartilhar" destination="GBm-3b-Qlf" id="os3-ad-2ws"/>
+                        <outlet property="lixeira" destination="qe1-ec-YzD" id="6wR-WX-kOM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cQk-vf-K2P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1089.8550724637682" y="186.83035714285714"/>
+        </scene>
+        <!--Open Photos View Controller-->
+        <scene sceneID="MVa-zD-8mC">
+            <objects>
+                <viewController storyboardIdentifier="OpenPhotosViewController" id="WU6-wW-K3u" customClass="OpenPhotosViewController" customModule="_º_projeto___UIcollection__AutoLayout__Ca_mera__Animation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EL1-Gm-EyZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Phw-7F-CXu">
+                                <rect key="frame" x="0.0" y="93" width="414" height="769"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="274-YX-4Bx">
+                                <rect key="frame" x="0.0" y="49" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Time" id="CAY-wE-V3R">
+                                        <barButtonItem key="leftBarButtonItem" title="back" id="kyf-3e-mFP">
+                                            <connections>
+                                                <action selector="voltar:" destination="WU6-wW-K3u" id="7OE-7X-lof"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="uN8-Jj-7JU"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LMZ-LV-71a"/>
+                    <connections>
+                        <outlet property="imagemAmpliada" destination="Phw-7F-CXu" id="lOQ-3z-KNO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WFq-cg-PX5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1786.9565217391305" y="171.42857142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aha-Ui-V0s">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ahI-Ks-eN1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="uYp-tK-zEm">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1H9-cj-Kzw" kind="relationship" relationship="rootViewController" id="cJ0-OT-Qtg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mFR-JK-J9p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="179.71014492753625" y="186.83035714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="digg" width="512" height="512"/>
+        <image name="selecionar" width="72" height="70"/>
+    </resources>
+</document>
