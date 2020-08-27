@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oVh-VD-MbC">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Camera View Controller-->
+        <scene sceneID="R0b-7b-VNV">
+            <objects>
+                <viewController id="oVh-VD-MbC" customClass="CameraViewController" customModule="_º_projeto___UIcollection__AutoLayout__Ca_mera__Animation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IEi-gR-KGa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfQ-jh-apt">
+                                <rect key="frame" x="113.5" y="724" width="187" height="30"/>
+                                <color key="backgroundColor" red="0.91183613990000001" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2l4-zO-vvz"/>
+                                    <constraint firstAttribute="width" constant="187" id="phg-Zx-wxi"/>
+                                </constraints>
+                                <state key="normal" title="Foto">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePhoto:" destination="oVh-VD-MbC" eventType="touchUpInside" id="gYN-R8-z84"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jvo-da-Mdi">
+                                <rect key="frame" x="20" y="0.0" width="86" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="86" id="EOB-5h-2fM"/>
+                                    <constraint firstAttribute="height" constant="30" id="seD-DR-4Em"/>
+                                </constraints>
+                                <state key="normal" title="normal"/>
+                                <state key="selected" title="selfie"/>
+                                <connections>
+                                    <action selector="toggleCameraButton:" destination="oVh-VD-MbC" eventType="touchUpInside" id="8bS-FT-QcV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYA-IN-4Mv">
+                                <rect key="frame" x="290" y="0.0" width="104" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="104" id="JI3-jp-9ad"/>
+                                    <constraint firstAttribute="height" constant="30" id="Olw-fD-V7J"/>
+                                </constraints>
+                                <state key="normal" title="Sem flash"/>
+                                <state key="selected" title="Com Flash"/>
+                                <state key="highlighted" title="Auto">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="flashButton:" destination="oVh-VD-MbC" eventType="touchUpInside" id="QWU-wq-Jvg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hfQ-jh-apt" firstAttribute="centerX" secondItem="IEi-gR-KGa" secondAttribute="centerX" id="1tV-fv-4Oo"/>
+                            <constraint firstItem="Gj2-oy-Icn" firstAttribute="bottom" secondItem="hfQ-jh-apt" secondAttribute="bottom" constant="54" id="28c-ng-gjw"/>
+                            <constraint firstItem="DYA-IN-4Mv" firstAttribute="top" secondItem="Gj2-oy-Icn" secondAttribute="top" id="B7m-eJ-Vt0"/>
+                            <constraint firstItem="Jvo-da-Mdi" firstAttribute="top" secondItem="Gj2-oy-Icn" secondAttribute="top" id="G2W-zI-ILt"/>
+                            <constraint firstItem="hfQ-jh-apt" firstAttribute="centerX" secondItem="IEi-gR-KGa" secondAttribute="centerX" id="H6V-x3-VxN"/>
+                            <constraint firstItem="Gj2-oy-Icn" firstAttribute="trailing" secondItem="DYA-IN-4Mv" secondAttribute="trailing" constant="20" id="pFQ-Mg-jMW"/>
+                            <constraint firstItem="Jvo-da-Mdi" firstAttribute="leading" secondItem="Gj2-oy-Icn" secondAttribute="leading" constant="20" id="qLH-CB-bEn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Gj2-oy-Icn"/>
+                    </view>
+                    <connections>
+                        <segue destination="eX0-yW-IPB" kind="show" identifier="showPreview" id="xag-47-S53"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mt0-8E-xw2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-159.42028985507247" y="112.5"/>
+        </scene>
+        <!--Preview View Controller-->
+        <scene sceneID="5km-OD-a0B">
+            <objects>
+                <viewController id="eX0-yW-IPB" customClass="PreviewViewController" customModule="_º_projeto___UIcollection__AutoLayout__Ca_mera__Animation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="udW-YI-6sg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ljZ-Wx-NVr">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lK6-sa-we6">
+                                <rect key="frame" x="351" y="0.0" width="43" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="43" id="Mze-OA-5Nn"/>
+                                    <constraint firstAttribute="height" constant="30" id="XtH-qC-gBh"/>
+                                </constraints>
+                                <state key="normal" title="Salvar"/>
+                                <connections>
+                                    <action selector="save:" destination="eX0-yW-IPB" eventType="touchUpInside" id="v69-jU-t2K"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbS-AV-ITy">
+                                <rect key="frame" x="20" y="0.0" width="61" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8p7-og-Xfq"/>
+                                    <constraint firstAttribute="width" constant="61" id="EVZ-hj-cxp"/>
+                                </constraints>
+                                <state key="normal" title="Cancelar"/>
+                                <connections>
+                                    <segue destination="oVh-VD-MbC" kind="show" id="VG7-SQ-zsg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="ljZ-Wx-NVr" firstAttribute="top" secondItem="gft-cs-JHh" secondAttribute="top" id="2ec-fs-sJo"/>
+                            <constraint firstItem="lK6-sa-we6" firstAttribute="top" secondItem="gft-cs-JHh" secondAttribute="top" id="2mB-PS-05d"/>
+                            <constraint firstItem="ljZ-Wx-NVr" firstAttribute="leading" secondItem="udW-YI-6sg" secondAttribute="leading" id="8k2-ze-56b"/>
+                            <constraint firstItem="dbS-AV-ITy" firstAttribute="leading" secondItem="gft-cs-JHh" secondAttribute="leading" constant="20" id="8lL-TF-GZ2"/>
+                            <constraint firstItem="dbS-AV-ITy" firstAttribute="top" secondItem="gft-cs-JHh" secondAttribute="top" id="eHw-bL-ojG"/>
+                            <constraint firstItem="gft-cs-JHh" firstAttribute="bottom" secondItem="ljZ-Wx-NVr" secondAttribute="bottom" id="l2S-dP-M0T"/>
+                            <constraint firstItem="gft-cs-JHh" firstAttribute="trailing" secondItem="lK6-sa-we6" secondAttribute="trailing" constant="20" id="qXN-1y-0lj"/>
+                            <constraint firstItem="gft-cs-JHh" firstAttribute="trailing" secondItem="ljZ-Wx-NVr" secondAttribute="trailing" id="yfL-BV-mrj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gft-cs-JHh"/>
+                    </view>
+                    <connections>
+                        <outlet property="preview" destination="ljZ-Wx-NVr" id="5Aa-UU-Hq2"/>
+                        <segue destination="qc9-NK-yLP" kind="show" identifier="showMain" id="WJm-wm-ajT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3F9-Il-Oqh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="674" y="113"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="IoJ-Mi-xMc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="qc9-NK-yLP" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kah-Sb-gwy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1364" y="-32"/>
+        </scene>
+    </scenes>
+</document>
